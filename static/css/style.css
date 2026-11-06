@@ -654,3 +654,17 @@ footer p {
     border-color: #06b6d4;
     transform: translateY(-3px);
 }
+/* Technical Skills - One Card Per Row */
+
+.skills-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+.skill-box {
+    width: 100%;
+    box-sizing: border-box;
+}
