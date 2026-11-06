@@ -9,244 +9,222 @@
     <title>Reshwanth | Personal Portfolio</title>
 
     <!-- Connect CSS -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="static/css/style.css">
 </head>
 
 <body>
 
     <!-- Navigation Bar -->
-    <nav>
-        <h2>Reshwanth.</h2>
+    <header>
+        <nav class="navbar">
+            <h2 class="logo">Reshwanth.</h2>
 
-        <div>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#education">Education</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
 
     <!-- Home Section -->
-    <section id="home" class="hero">
+<section id="home" class="hero">
 
-        <img src="{{ url_for('static', filename='images/profile.jpg') }}"
-     alt="Reshwanth Profile Photo"
-     class="profile-photo">
+    <div class="hero-content">
 
-        <p>Hello, I'm</p>
+        <h1>Hello, I'm <span>Reshwanth</span></h1>
 
-        <h1>Reshwanth SB</h1>
-
-        <h2>AI & Machine Learning Student</h2>
+        <h2>Artificial Intelligence and Machine Learning Student</h2>
 
         <p>
-            I am a Computer Science Engineering Student
+            Passionate about Python, Artificial Intelligence,
+            Machine Learning and Data Science.
+            I enjoy learning new technologies and building projects.
         </p>
 
-       
-<div class="hero-buttons">
+        <div class="hero-buttons">
+            <a href="#projects" class="btn">Explore Portfolio</a>
 
-    <a class="btn" href="#about">
-        Explore My Portfolio
-    </a>
+            <a href="static/files/Reshwanth_SB_Resume.pdf"
+               class="btn resume-btn" download>
+                Download Resume
+            </a>
+        </div>
 
-    <a class="resume-btn"
-       href="{{ url_for('static', filename='files/Reshwanth_SB_Resume.pdf') }}"
-       download>
-        Download Resume
-    </a>
+        <div class="hero-social-links">
+            <a href="https://github.com/reshwanth-stack" target="_blank">GitHub ↗</a>
+            <a href="https://www.linkedin.com/in/s-b-reshwanth-s-b-reshwanth-3ba63132b"
+               target="_blank">LinkedIn ↗</a>
+            <a href="mailto:ssbreshwanth@gmail.com">Email ↗</a>
+        </div>
 
-</div>
+    </div>
 
-<div class="hero-social-links">
+    <div class="hero-image">
+        <img src="static/images/profile.jpg"
+             alt="Reshwanth Profile Photo"
+             class="profile-photo">
+    </div>
 
-    <a href="https://github.com/reshwanth-stack" target="_blank">
-        GitHub <span>↗</span>
-    </a>
+</section>
 
-    <a href="https://www.linkedin.com/in/s-b-reshwanth-s-b-reshwanth-3ba63132b" target="_blank">
-        LinkedIn <span>↗</span>
-    </a>
 
-    <a href="mailto:ssbreshwanth@gmail.com">
-        Email <span>↗</span>
-    </a>
 
-</div>
+    <!-- Education Section -->
+    <section id="education" class="education-section">
 
+        <h2>My <span>Education</span></h2>
+
+        <div class="education-container">
+
+            <div class="education-box">
+
+                <h3>B.E. Artificial Intelligence and Machine Learning</h3>
+
+                <p>Rajalakshmi Institute of Technology, Chennai</p>
+
+                <p>2024 – 2028</p>
+
+                <p>CGPA: 7.66</p>
+
+            </div>
+
+        </div>
 
     </section>
 
 
-    <!-- About Section -->
-    
-    
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
 
-<!-- About Section -->
-<section id="about" class="about-section">
+        <h2>My <span>Skills</span></h2>
 
-    <h2>About <span>Me</span></h2>
+        <div class="skills-container">
 
-    <div class="about-card">
-
-        <p>
-            I am a Computer Science Engineering student specializing
-            in Artificial Intelligence and Machine Learning at
-            Rajalakshmi Institute of Technology, Chennai.
-        </p>
-
-        <p>
-            I have foundational experience in full-stack development
-            and an interest in machine learning algorithms, model
-            development, and data analysis. I enjoy learning new
-            technologies and applying my knowledge to practical projects.
-        </p>
-
-        <p>
-            I am looking for opportunities to improve my technical
-            skills, gain real-world experience, and contribute to
-            meaningful software and AI/ML projects.
-        </p>
-
-    </div>
-
-</section>
-
-
-
-<!-- Education Section -->
-<section id="education" class="education-section">
-
-    <p class="section-subtitle">MY ACADEMIC BACKGROUND</p>
-
-    <h2>My <span>Education</span></h2>
-
-    <div class="education-card">
-
-        <p class="education-year">2024 – 2028</p>
-
-        <h3>
-            B.E. Artificial Intelligence and Machine Learning
-        </h3>
-
-        <p class="college-name">
-            Rajalakshmi Institute of Technology, Chennai
-        </p>
-
-        <p class="cgpa">CGPA: 7.66</p>
-
-    </div>
-
-</section>
-
-
-
-    
-<!-- Technical Skills Section -->
-<section id="skills" class="skills-section">
-
-    <p class="section-subtitle">WHAT I WORK WITH</p>
-
-    <h2>Technical <span>Skills</span></h2>
-
-    <div class="skills-container">
-
-        <div class="skill-card">
-            <h3>Programming Languages</h3>
-            <div class="skill-tags">
-                <span>Python</span>
-                <span>Java</span>
-                <span>SQL</span>
+            <div class="skill-box">
+                <h3>Programming Languages</h3>
+                <p>Python</p>
+                <p>Java</p>
+                <p>SQL</p>
             </div>
+
+            <div class="skill-box">
+                <h3>Machine Learning</h3>
+                <p>Supervised Learning</p>
+                <p>Decision Trees</p>
+                <p>Random Forest</p>
+                <p>Model Evaluation</p>
+            </div>
+
+            <div class="skill-box">
+                <h3>Data Science Libraries</h3>
+                <p>Pandas</p>
+                <p>NumPy</p>
+                <p>Matplotlib</p>
+                <p>Seaborn</p>
+                <p>Scikit-learn</p>
+            </div>
+
+            <div class="skill-box">
+                <h3>Development Tools</h3>
+                <p>HTML</p>
+                <p>CSS</p>
+                <p>JavaScript</p>
+                <p>Flask</p>
+                <p>GitHub</p>
+                <p>VS Code</p>
+            </div>
+
         </div>
 
-        <div class="skill-card">
-            <h3>Machine Learning</h3>
-            <div class="skill-tags">
-                <span>Supervised Learning</span>
-                <span>Decision Trees</span>
-                <span>Random Forest</span>
-                <span>Model Evaluation</span>
-            </div>
-        </div>
-
-        <div class="skill-card">
-            <h3>Data Science Libraries</h3>
-            <div class="skill-tags">
-                <span>Pandas</span>
-                <span>NumPy</span>
-                <span>Matplotlib</span>
-                <span>Seaborn</span>
-                <span>Scikit-learn</span>
-            </div>
-        </div>
-
-        <div class="skill-card">
-            <h3>Development Tools</h3>
-            <div class="skill-tags">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-                <span>Flask</span>
-                <span>GitHub</span>
-                <span>VS Code</span>
-            </div>
-        </div>
-
-    </div>
-
-</section>
-
+    </section>
 
 
     <!-- Projects Section -->
-    <section id="projects">
+    <section id="projects" class="projects-section">
 
-        <h2>My Projects</h2>
+        <h2>My <span>Projects</span></h2>
 
-        <div class="project-container">
+        <div class="projects-container">
 
-            <div class="project-card">
-
+            <div class="project-box">
                 <h3>Personal Portfolio Website</h3>
-
                 <p>
-                    A full-stack portfolio website built using
-                    Python, Flask, HTML and CSS.
+                    A personal portfolio website created using
+                    HTML, CSS and web development technologies
+                    to showcase my profile, skills and projects.
                 </p>
-
-                <span>Python | Flask | HTML | CSS</span>
-
             </div>
 
-
-            <div class="project-card">
-
+            <div class="project-box">
                 <h3>Python Mini Projects</h3>
-
                 <p>
-                    A collection of Python programs demonstrating
-                    programming fundamentals.
+                    Small Python programming projects developed
+                    to practise programming concepts and problem-solving.
                 </p>
-
-                <span>Python</span>
-
             </div>
 
-
-            <div class="project-card">
-
+            <div class="project-box">
                 <h3>Data Analysis Project</h3>
-
                 <p>
-                    Analyzing and understanding data using
-                    Python and data analysis techniques.
+                    A data analysis project using Python libraries
+                    to explore data and understand useful patterns.
                 </p>
+            </div>
 
-                <span>Python | Data Analysis</span>
+        </div>
+
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+
+        <h2>Contact <span>Me</span></h2>
+
+        <p class="contact-description">
+            Have an internship opportunity or a project idea?
+            Feel free to get in touch.
+        </p>
+
+        <div class="contact-container">
+
+            <div class="contact-info">
+
+                <div class="contact-item">
+                    <h3>Email</h3>
+                    <p>
+                        <a href="mailto:ssbreshwanth@gmail.com">
+                            ssbreshwanth@gmail.com
+                        </a>
+                    </p>
+                </div>
+
+                <div class="contact-item">
+                    <h3>GitHub</h3>
+                    <p>
+                        <a href="https://github.com/reshwanth-stack"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            github.com/reshwanth-stack
+                        </a>
+                    </p>
+                </div>
+
+                <div class="contact-item">
+                    <h3>LinkedIn</h3>
+                    <p>
+                        <a href="https://www.linkedin.com/in/s-b-reshwanth-s-b-reshwanth-3ba63132b"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            View LinkedIn Profile
+                        </a>
+                    </p>
+                </div>
 
             </div>
 
@@ -254,60 +232,15 @@
 
     </section>
 
-<!-- Contact Section -->
-<section id="contact" class="contact-section">
-
-    <h2>Contact Me</h2>
-
-    <div class="contact-container">
-
-        <div class="contact-form">
-
-            {% with messages = get_flashed_messages(with_categories=true) %}
-                {% if messages %}
-                    {% for category, message in messages %}
-                        <p class="{{ category }}">{{ message }}</p>
-                    {% endfor %}
-                {% endif %}
-            {% endwith %}
-
-            <form action="/send-message" method="POST">
-                <input type="text" name="name" placeholder="Your Name" required>
-
-                <input type="email" name="email" placeholder="Your Email" required>
-
-                <textarea name="message" placeholder="Your Message" required></textarea>
-
-                <button type="submit">Send Message</button>
-            </form>
-
-        </div>
-    </div>
-</section>
 
     <!-- Footer -->
-    
-<footer>
-    <h3>Reshwanth.</h3>
+    <footer class="footer">
 
-    <div class="hero-social-links">
-    <a href="https://github.com/reshwanth-stack" target="_blank">
-        GitHub <span>↗</span>
-    </a>
+        <p>
+            © 2026 Reshwanth. All Rights Reserved.
+        </p>
 
-    <a href="https://www.linkedin.com/in/s-b-reshwanth-s-b-reshwanth-3ba63132b" target="_blank">
-        LinkedIn <span>↗</span>
-    </a>
-
-    <a href="mailto:ssbreshwanth@gmail.com">
-        Email <span>↗</span>
-    </a>
-</div>
-
-    <p>© 2026 Reshwanth. All Rights Reserved.</p>
-</footer>
-
+    </footer>
 
 </body>
-
 </html>
