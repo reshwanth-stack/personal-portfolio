@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Reshwanth</title>
+
+    <style>
+        body {
+            background: #0f172a;
+            color: white;
+            font-family: Arial, sans-serif;
+            padding: 30px;
+        }
+
+        .dashboard {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h1 {
+            color: #38bdf8;
+            text-align: center;
+        }
+
+        .message-card {
+            background: #1e293b;
+            padding: 22px;
+            margin: 20px 0;
+            border-radius: 12px;
+            border: 1px solid #334155;
+            overflow-wrap: anywhere;
+        }
+
+        .message-card h3 {
+            color: #38bdf8;
+        }
+
+        .delete-btn {
+            background: #dc2626;
+            color: white;
+            padding: 10px 18px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .logout-btn {
+            display: inline-block;
+            background: #0284c7;
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            border-radius: 7px;
+        }
+
+        .success {
+            color: #4ade80;
+        }
+
+        .empty {
+            text-align: center;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <h1>Admin Dashboard</h1>
+
+    <p>Welcome, Reshwanth!</p>
+
+    <a href="/admin-logout" class="logout-btn">Logout</a>
+
+    <h2>Visitor Messages</h2>
+
+    {% with flash_messages = get_flashed_messages(with_categories=true) %}
+        {% for category, message in flash_messages %}
+            <p class="{{ category }}">{{ message }}</p>
+        {% endfor %}
+    {% endwith %}
+
+    {% for item in messages %}
+        <div class="message-card">
+
+            <h3>{{ item['name'] }}</h3>
+
+            <p><strong>Email:</strong> {{ item['email'] }}</p>
+
+            <p><strong>Message:</strong></p>
+
+            <p>{{ item['message'] }}</p>
+
+            <form action="{{ url_for('delete_message', message_id=item['id']) }}"
+                  method="POST"
+                  onsubmit="return confirm('Delete this message?');">
+
+                <button type="submit" class="delete-btn">
+                    Delete Message
+                </button>
+
+            </form>
+
+        </div>
+    {% else %}
+        <p class="empty">No messages received yet.</p>
+    {% endfor %}
+
+</div>
+
+</body>
+</html>
