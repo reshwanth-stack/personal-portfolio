@@ -668,3 +668,17 @@ footer p {
     width: 100%;
     box-sizing: border-box;
 }
+/* Projects - One Card Per Row */
+
+.projects-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+.project-box {
+    width: 100%;
+    box-sizing: border-box;
+}
